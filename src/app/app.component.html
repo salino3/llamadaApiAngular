@@ -1,0 +1,25 @@
+<h1>Lista de personas</h1>
+
+<table class="table container table-hover caption-top table-bordered table-sm ">
+ 
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre y apellido</th>
+      <th scope="col">Email</th>
+      <th scope="col">City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let persona of personas ">
+      <th scope="row">
+ <!-- *ngFor=" let persona of personas; let i=index"
+       {{i + 1}} si no hubiera 'id' en la API  -->
+   {{persona.id}}</th>
+      <td>{{persona.name}}  {{persona.lastname}}</td>
+      <td>{{persona.email}}</td>
+      <td>{{persona.city}}</td>
+    </tr>
+  
+  </tbody>
+</table>
